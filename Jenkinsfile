@@ -33,10 +33,15 @@ pipeline{
                                   steps{
                                          sh 'wget http://13.67.56.156:8081/artifactory/example-repo-local/mavenwebApp.war'
                                          sh 'docker cp mavenwebApp.war aa9290ba1adc:/usr/local/tomcat/webapps/mavenwebApp.war'
-                                         
+                                    
                                      
                        }
             }
+                       stage{'remove old artifacts'){
+                                  steps{
+                                             sh 'rm -f mavenwebApp.war'
+                                  }
+                       }
             }
            
            }
