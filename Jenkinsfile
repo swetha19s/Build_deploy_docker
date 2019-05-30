@@ -20,7 +20,7 @@ pipeline{
                                           """{
                                           "files": [
                                           {
-                                          "pattern": "/var/lib/jenkins/workspace/Build_deploy_docker/target/*.war",
+                                          "pattern": "/var/lib/jenkins/workspace/Docker_build_deploy/target/*.war",
                                           "target": "example-repo-local"
                                           }
                                           ]
@@ -31,8 +31,8 @@ pipeline{
                        }
                        stage('Docker Deploy'){
                                   steps{
-                                         sh ' wget http://13.67.56.156:8081/artifactory/example-repo-local/mavenwebApp.war -o /var/lib/jenkins/workspace/Build_deploy_docker/mavenwebApp.war'
-                                         sh 'docker cp /var/lib/jenkins/workspace/Build_deploy_docker/mavenwebApp.war aa9290ba1adc:/usr/local/tomcat/webapps/mavenwebApp.war'
+                                         sh ' wget http://13.67.56.156:8081/artifactory/example-repo-local/mavenwebApp.war -o /var/lib/jenkins/workspace/Docker_build_deploy/mavenwebApp.war'
+                                         sh 'docker cp /var/lib/jenkins/workspace/Docker_build_deploy/mavenwebApp.war aa9290ba1adc:/usr/local/tomcat/webapps/mavenwebApp.war'
                                      
                        }
             }
