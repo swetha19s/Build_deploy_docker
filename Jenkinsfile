@@ -20,7 +20,7 @@ pipeline{
                                           """{
                                           "files": [
                                           {
-                                          "pattern": "/var/lib/jenkins/workspace/Docker_build_deploy/target/*.war",
+                                          "pattern": "target/*.war",
                                           "target": "example-repo-local"
                                           }
                                           ]
