@@ -31,7 +31,7 @@ pipeline{
                        }
                        stage('Docker Deploy'){
                                   steps{
-                                     sh 'docker exec -it aa9290ba1adc /bin/bash'
+                                     sh 'docker exec -i aa9290ba1adc /bin/bash'
                                      sh ' wget http://13.67.56.156:8081/artifactory/example-repo-local/mavenwebApp.war -o webapps/mavenwebApp.war'
                        }
             }
