@@ -31,7 +31,7 @@ pipeline{
                        }
                        stage('Docker Deploy'){
                                   steps{
-                                         sh ' wget http://13.67.56.156:8081/artifactory/example-repo-local/mavenwebApp.war -o /var/lib/jenkins/workspace/Docker_build_deploy/mavenwebApp.war'
+                                         sh ' wget http://13.67.56.156:8081/artifactory/example-repo-local/mavenwebApp.war'
                                          sh 'docker cp /var/lib/jenkins/workspace/Docker_build_deploy/mavenwebApp.war aa9290ba1adc:/usr/local/tomcat/webapps/mavenwebApp.war'
                                      
                        }
