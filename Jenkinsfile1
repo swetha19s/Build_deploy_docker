@@ -35,8 +35,7 @@ pipeline{
                                          sh 'wget http://13.67.56.156:8081/artifactory/example-repo-local/mavenwebApp.war'
                                          sh 'docker cp mavenwebApp.war app-deploy1:/usr/local/tomcat/webapps/mavenwebApp.war'
                                          sh 'chmod 777 mavenwebApp.war'
-                                    
-                                     
+                                         sh 'rm -rf mavenwebApp.war'
                        }
             }
                        stage('remove old artifacts'){
