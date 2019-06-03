@@ -41,7 +41,7 @@ pipeline{
             }
                        stage('remove old artifacts'){
                                   steps{
-                                            sh 'rm mavenwebApp.war'
+                                            sh 'rm -rf mavenwebApp.war'
                                   }
                        }
             }
