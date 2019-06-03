@@ -27,7 +27,6 @@ pipeline{
                                           }"""
                                      )
                                   }
-             
                        }
                        stage('Docker Deploy'){
                            agent{label 'Slave1'}
@@ -38,11 +37,6 @@ pipeline{
                                          sh 'rm -rf mavenwebApp.war'
                        }
             }
-                       stage('remove old artifacts'){
-                                  steps{
-                                            sh 'rm -rf mavenwebApp.war'
-                                  }
-                       }
             }
            
            }
