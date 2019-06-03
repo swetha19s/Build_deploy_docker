@@ -40,7 +40,8 @@ pipeline{
             }
                        stage('remove old artifacts'){
                                   steps{
-                                             sh 'rm -f mavenwebApp.war'
+                                            sh 'chmod 777 mavenwebApp.war'
+                                            sh 'rm -f mavenwebApp.war'
                                   }
                        }
             }
